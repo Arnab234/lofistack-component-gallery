@@ -1,0 +1,48 @@
+/* AI Agent Status Panel tokens — override these to re-theme the component. */
+:root {
+  --asp-bg: #F3F7F4;
+  --asp-row: #FAFCFB;
+  --asp-row-hover: #FFFFFF;
+  --asp-ink: #0E2116;
+  --asp-muted: #48604F;
+  --asp-faint: #5F7567;
+  --asp-line: #D5E1D9;
+  --asp-accent: #166534;
+  --asp-accent-soft: rgba(22, 101, 52, 0.10);
+  --asp-run: #15803D;
+  --asp-idle: #5B6878;
+  --asp-err: #B42318;
+  --asp-pause: #9A5B05;
+  --asp-restart: #0E7490;
+  --asp-glow: 0.35;
+  --asp-scan: rgba(14, 33, 22, 0.025);
+  --asp-shadow: rgba(14, 33, 22, 0.20);
+  --asp-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+  --asp-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --asp-bg: #080B09; --asp-row: #0D1310; --asp-row-hover: #111914; --asp-ink: #D5E8DB; --asp-muted: #8CA394; --asp-faint: #71897A;
+  --asp-line: #1B2820; --asp-accent: #4ADE80; --asp-accent-soft: rgba(74, 222, 128, 0.10);
+  --asp-run: #4ADE80; --asp-idle: #94A3B8; --asp-err: #F87171; --asp-pause: #FBBF24; --asp-restart: #67E8F9;
+  --asp-glow: 0.75; --asp-scan: rgba(74, 222, 128, 0.022); --asp-shadow: rgba(0, 0, 0, 0.7);
+  }
+}
+:root[data-theme="dark"] {
+  --asp-bg: #080B09; --asp-row: #0D1310; --asp-row-hover: #111914; --asp-ink: #D5E8DB; --asp-muted: #8CA394; --asp-faint: #71897A;
+  --asp-line: #1B2820; --asp-accent: #4ADE80; --asp-accent-soft: rgba(74, 222, 128, 0.10);
+  --asp-run: #4ADE80; --asp-idle: #94A3B8; --asp-err: #F87171; --asp-pause: #FBBF24; --asp-restart: #67E8F9;
+  --asp-glow: 0.75; --asp-scan: rgba(74, 222, 128, 0.022); --asp-shadow: rgba(0, 0, 0, 0.7);
+}
+@keyframes asp-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+@keyframes asp-flash {
+  from { background: color-mix(in oklab, var(--asp-c) 14%, var(--asp-row)); }
+  to { background: var(--asp-row); }
+}
+@keyframes asp-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
