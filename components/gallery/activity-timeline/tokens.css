@@ -1,0 +1,43 @@
+/* Activity Timeline tokens — override these to re-theme the component. */
+:root {
+  --atl-card: #FCFBFF;
+  --atl-raise: #FFFFFF;
+  --atl-ink: #1E1B2E;
+  --atl-muted: #59556D;
+  --atl-faint: #6B6782;
+  --atl-line: #E5E3EF;
+  --atl-tint: #F2F0F9;
+  --atl-rail: #DAD6EA;
+  --atl-accent: #5B4BC4;
+  --atl-accent-soft: rgba(91, 75, 196, 0.10);
+  --atl-node-ink: #FFFFFF;
+  --atl-c-call: #0E8A7D;
+  --atl-c-email: #3A66D6;
+  --atl-c-form: #C2650A;
+  --atl-c-deal: #2E8F52;
+  --atl-c-note: #BE3F78;
+  --atl-shadow: rgba(36, 28, 74, 0.16);
+  --atl-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --atl-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --atl-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --atl-card: #191822; --atl-raise: #201F2B; --atl-ink: #ECEAF5; --atl-muted: #ABA7BF; --atl-faint: #8F8BA5;
+  --atl-line: #2C2A3A; --atl-tint: #22202E; --atl-rail: #343146;
+  --atl-accent: #B1A6FA; --atl-accent-soft: rgba(177, 166, 250, 0.12); --atl-node-ink: #15141C;
+  --atl-c-call: #3DD6C3; --atl-c-email: #86A9FF; --atl-c-form: #F5AA55; --atl-c-deal: #5EDB8E; --atl-c-note: #F584BE;
+  --atl-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --atl-card: #191822; --atl-raise: #201F2B; --atl-ink: #ECEAF5; --atl-muted: #ABA7BF; --atl-faint: #8F8BA5;
+  --atl-line: #2C2A3A; --atl-tint: #22202E; --atl-rail: #343146;
+  --atl-accent: #B1A6FA; --atl-accent-soft: rgba(177, 166, 250, 0.12); --atl-node-ink: #15141C;
+  --atl-c-call: #3DD6C3; --atl-c-email: #86A9FF; --atl-c-form: #F5AA55; --atl-c-deal: #5EDB8E; --atl-c-note: #F584BE;
+  --atl-shadow: rgba(0, 0, 0, 0.6);
+}
+@keyframes atl-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
