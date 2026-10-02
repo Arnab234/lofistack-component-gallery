@@ -1,0 +1,57 @@
+/* Notification Center tokens — override these to re-theme the component. */
+:root {
+  --ntc-panel: #FFFFFF;
+  --ntc-raise: #FFFFFF;
+  --ntc-ink: #1C1417;
+  --ntc-muted: #5F5459;
+  --ntc-faint: #75686E;
+  --ntc-line: #F0E6E9;
+  --ntc-tint: #FBF5F7;
+  --ntc-unread: #FFF6F8;
+  --ntc-accent: #E11D48;
+  --ntc-accent-ink: #BE123C;
+  --ntc-accent-soft: rgba(225, 29, 72, 0.10);
+  --ntc-on-accent: #FFFFFF;
+  --ntc-bell: #FFFFFF;
+  --ntc-ok: #15803D;
+  --ntc-warn: #B45309;
+  --ntc-info: #4F46E5;
+  --ntc-shadow: rgba(60, 20, 34, 0.22);
+  --ntc-width: 400px;
+  --ntc-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --ntc-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --ntc-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ntc-panel: #1C1619; --ntc-raise: #241D20; --ntc-ink: #F5EEF0; --ntc-muted: #BBADB2; --ntc-faint: #9A8C91;
+    --ntc-line: #2F2629; --ntc-tint: #241D20; --ntc-unread: #251A1E;
+    --ntc-accent: #FB7185; --ntc-accent-ink: #FDA4AF; --ntc-accent-soft: rgba(251, 113, 133, 0.13); --ntc-on-accent: #2A0710;
+    --ntc-bell: #1E181B; --ntc-ok: #4ADE80; --ntc-warn: #FBBF24; --ntc-info: #A5B4FC;
+    --ntc-shadow: rgba(0, 0, 0, 0.66);
+  }
+}
+:root[data-theme="dark"] {
+  --ntc-panel: #1C1619; --ntc-raise: #241D20; --ntc-ink: #F5EEF0; --ntc-muted: #BBADB2; --ntc-faint: #9A8C91;
+  --ntc-line: #2F2629; --ntc-tint: #241D20; --ntc-unread: #251A1E;
+  --ntc-accent: #FB7185; --ntc-accent-ink: #FDA4AF; --ntc-accent-soft: rgba(251, 113, 133, 0.13); --ntc-on-accent: #2A0710;
+  --ntc-bell: #1E181B; --ntc-ok: #4ADE80; --ntc-warn: #FBBF24; --ntc-info: #A5B4FC;
+  --ntc-shadow: rgba(0, 0, 0, 0.66);
+}
+@keyframes ntc-ring {
+  0%, 100% { transform: rotate(0); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-12deg); }
+  45% { transform: rotate(8deg); }
+  60% { transform: rotate(-5deg); }
+  75% { transform: rotate(2deg); }
+}
+@keyframes ntc-bump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.28); }
+  100% { transform: scale(1); }
+}
+@keyframes ntc-new {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: none; }
+}
