@@ -1,0 +1,53 @@
+/* Campaign Snapshot tokens — override these to re-theme the component. */
+:root {
+  --cps-card: #FFFFFF;
+  --cps-ink: #0E1726;
+  --cps-muted: #586174;
+  --cps-faint: #8B93A3;
+  --cps-line: #E3E7EE;
+  --cps-tint: #F3F5FA;
+  --cps-hero: #0E1726;
+  --cps-hero-ink: #F3F5F9;
+  --cps-hero-muted: #9AA5BA;
+  --cps-hero-line: rgba(255, 255, 255, 0.12);
+  --cps-hero-track: rgba(255, 255, 255, 0.08);
+  --cps-hero-spend: rgba(255, 255, 255, 0.38);
+  --cps-hero-series: #8FA3FF;
+  --cps-series: #3050E6;
+  --cps-series-soft: rgba(48, 80, 230, 0.12);
+  --cps-good: #15804A;
+  --cps-bad: #C23B2B;
+  --cps-shadow: rgba(14, 23, 38, 0.2);
+  /* status colours sit on the dark hero panel in both themes */
+  --cps-st-active: #5EE59A;
+  --cps-st-learning: #9DB0FF;
+  --cps-st-paused: #F4C261;
+  --cps-st-ended: #A3ADBF;
+  --cps-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --cps-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --cps-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --cps-card: #141A24; --cps-ink: #E8ECF3; --cps-muted: #98A2B5; --cps-faint: #6E788B;
+  --cps-line: #252D3A; --cps-tint: #1A2130;
+  --cps-hero: #1D2842; --cps-hero-ink: #F1F4FA; --cps-hero-muted: #A5B0C6;
+  --cps-hero-line: rgba(255, 255, 255, 0.10); --cps-hero-track: rgba(255, 255, 255, 0.07);
+  --cps-hero-spend: rgba(255, 255, 255, 0.36); --cps-hero-series: #A9B8FF;
+  --cps-series: #8FA3FF; --cps-series-soft: rgba(143, 163, 255, 0.14);
+  --cps-good: #4CC985; --cps-bad: #FF7A6B; --cps-shadow: rgba(0, 0, 0, 0.55);
+  }
+}
+:root[data-theme="dark"] {
+  --cps-card: #141A24; --cps-ink: #E8ECF3; --cps-muted: #98A2B5; --cps-faint: #6E788B;
+  --cps-line: #252D3A; --cps-tint: #1A2130;
+  --cps-hero: #1D2842; --cps-hero-ink: #F1F4FA; --cps-hero-muted: #A5B0C6;
+  --cps-hero-line: rgba(255, 255, 255, 0.10); --cps-hero-track: rgba(255, 255, 255, 0.07);
+  --cps-hero-spend: rgba(255, 255, 255, 0.36); --cps-hero-series: #A9B8FF;
+  --cps-series: #8FA3FF; --cps-series-soft: rgba(143, 163, 255, 0.14);
+  --cps-good: #4CC985; --cps-bad: #FF7A6B; --cps-shadow: rgba(0, 0, 0, 0.55);
+}
+@keyframes cps-pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
