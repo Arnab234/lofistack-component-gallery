@@ -1,0 +1,41 @@
+/* Lead Source Breakdown tokens — override these to re-theme the component. */
+:root {
+  --lsb-card: #FFFFFF;
+  --lsb-ink: #121417;
+  --lsb-muted: #535962;
+  --lsb-faint: #6B717B;
+  --lsb-line: #E4E6EA;
+  --lsb-tint: #F4F5F7;
+  --lsb-track: #EEF0F2;
+  --lsb-strong: #1B1F24;
+  --lsb-strong-ink: #FFFFFF;
+  --lsb-focus: #1F5FAF;
+  --lsb-good: #1C7A3A;
+  --lsb-shadow: rgba(18, 22, 28, 0.2);
+  /* categorical slots: validated order (adjacent pairs incl. the 6 → 1 wrap, light + dark) */
+  --lsb-c1: #2A78D6;
+  --lsb-c2: #EB6834;
+  --lsb-c3: #1BAF7A;
+  --lsb-c4: #EDA100;
+  --lsb-c5: #E87BA4;
+  --lsb-c6: #008300;
+  --lsb-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --lsb-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --lsb-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --lsb-card: #17191C; --lsb-ink: #ECEEF1; --lsb-muted: #A9AFB8; --lsb-faint: #8D939C;
+  --lsb-line: #2A2E34; --lsb-tint: #1D2024; --lsb-track: #23262B;
+  --lsb-strong: #ECEEF1; --lsb-strong-ink: #121417; --lsb-focus: #7FB2F0; --lsb-good: #5CC983;
+  --lsb-shadow: rgba(0, 0, 0, 0.6);
+  --lsb-c1: #3987E5; --lsb-c2: #D95926; --lsb-c3: #199E70; --lsb-c4: #C98500; --lsb-c5: #D55181; --lsb-c6: #008300;
+  }
+}
+:root[data-theme="dark"] {
+  --lsb-card: #17191C; --lsb-ink: #ECEEF1; --lsb-muted: #A9AFB8; --lsb-faint: #8D939C;
+  --lsb-line: #2A2E34; --lsb-tint: #1D2024; --lsb-track: #23262B;
+  --lsb-strong: #ECEEF1; --lsb-strong-ink: #121417; --lsb-focus: #7FB2F0; --lsb-good: #5CC983;
+  --lsb-shadow: rgba(0, 0, 0, 0.6);
+  --lsb-c1: #3987E5; --lsb-c2: #D95926; --lsb-c3: #199E70; --lsb-c4: #C98500; --lsb-c5: #D55181; --lsb-c6: #008300;
+}
