@@ -1,0 +1,32 @@
+/* Lead Funnel tokens — override these to re-theme the component. */
+:root {
+  --lfa-card: #FFFFFF;
+  --lfa-ink: #17141F;
+  --lfa-muted: #5E5869;
+  --lfa-faint: #78717F;
+  --lfa-line: #E7E3EE;
+  --lfa-tint: #F5F3F8;
+  --lfa-from: #E58DBE; /* first stage colour */
+  --lfa-to: #8A0F52; /* last stage colour */
+  --lfa-accent: #A3165F;
+  --lfa-good: #1B7F4B;
+  --lfa-bad: #B4372A;
+  --lfa-shadow: rgba(30, 16, 40, 0.22);
+  --lfa-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --lfa-num: "Bahnschrift", "DIN Alternate", "DIN Next", "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
+  --lfa-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --lfa-card: #17141C; --lfa-ink: #EEEAF3; --lfa-muted: #A8A1B3; --lfa-faint: #8C8598;
+    --lfa-line: #2B2633; --lfa-tint: #1F1B26;
+    --lfa-from: #6E2C57; --lfa-to: #FF7BC2; --lfa-accent: #FF8CCB;
+    --lfa-good: #5FD394; --lfa-bad: #FF8A7A; --lfa-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --lfa-card: #17141C; --lfa-ink: #EEEAF3; --lfa-muted: #A8A1B3; --lfa-faint: #8C8598;
+  --lfa-line: #2B2633; --lfa-tint: #1F1B26;
+  --lfa-from: #6E2C57; --lfa-to: #FF7BC2; --lfa-accent: #FF8CCB;
+  --lfa-good: #5FD394; --lfa-bad: #FF8A7A; --lfa-shadow: rgba(0, 0, 0, 0.6);
+}
