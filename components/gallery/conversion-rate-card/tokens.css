@@ -1,0 +1,46 @@
+/* Conversion Rate Card tokens — override these to re-theme the component. */
+:root {
+  --crc-card: #FBFAF7;
+  --crc-raise: #FFFFFF;
+  --crc-ink: #1D1C1A;
+  --crc-muted: #5F5B54;
+  --crc-faint: #736E66;
+  --crc-line: #E5E1D8;
+  --crc-tint: #F2EFE8;
+  --crc-gold: #B7791F;
+  --crc-gold-ink: #8A5A12;
+  --crc-gold-soft: rgba(183, 121, 31, 0.13);
+  --crc-good: #2B7449;
+  --crc-bad: #A93E2A;
+  --crc-shadow: rgba(36, 28, 14, 0.24);
+  /* the gauge panel stays charcoal in both themes */
+  --crc-dial: #1A1917;
+  --crc-dial-2: #2A2723;
+  --crc-dial-ink: #F5F0E6;
+  --crc-dial-muted: #B9B0A2;
+  --crc-dial-line: rgba(245, 240, 230, 0.12);
+  --crc-dial-track: rgba(245, 240, 230, 0.09);
+  --crc-dial-gold: #F0C05A;
+  --crc-dial-good: #84DEAA;
+  --crc-dial-bad: #FF9F8A;
+  --crc-arc-from: #9C6516;
+  --crc-arc-to: #F6C453;
+  --crc-halo: rgba(240, 192, 90, 0.20);
+  --crc-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --crc-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --crc-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --crc-card: #19191A; --crc-raise: #232321; --crc-ink: #EFEBE4; --crc-muted: #B0AA9F; --crc-faint: #908A80;
+  --crc-line: #2E2D2A; --crc-tint: #201F1D; --crc-gold: #F6C453; --crc-gold-ink: #F6C453;
+  --crc-gold-soft: rgba(246, 196, 83, 0.12); --crc-good: #74D69E; --crc-bad: #FF9580; --crc-shadow: rgba(0, 0, 0, 0.6);
+  --crc-dial: #0F0F10; --crc-dial-2: #1C1B19; --crc-dial-gold: #F6C453; --crc-halo: rgba(246, 196, 83, 0.16);
+  }
+}
+:root[data-theme="dark"] {
+  --crc-card: #19191A; --crc-raise: #232321; --crc-ink: #EFEBE4; --crc-muted: #B0AA9F; --crc-faint: #908A80;
+  --crc-line: #2E2D2A; --crc-tint: #201F1D; --crc-gold: #F6C453; --crc-gold-ink: #F6C453;
+  --crc-gold-soft: rgba(246, 196, 83, 0.12); --crc-good: #74D69E; --crc-bad: #FF9580; --crc-shadow: rgba(0, 0, 0, 0.6);
+  --crc-dial: #0F0F10; --crc-dial-2: #1C1B19; --crc-dial-gold: #F6C453; --crc-halo: rgba(246, 196, 83, 0.16);
+}
