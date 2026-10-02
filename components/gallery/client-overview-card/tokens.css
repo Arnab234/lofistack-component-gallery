@@ -1,0 +1,55 @@
+/* Client Overview tokens — override these to re-theme the component. */
+:root {
+  --cov-card: #FFFEFB;
+  --cov-band: #F2EEE7;
+  --cov-ink: #18233A;
+  --cov-muted: #565D6B;
+  --cov-faint: #6B717D;
+  --cov-line: #E6E1D8;
+  --cov-tint: #F6F3EE;
+  --cov-navy: #1F2D4D;
+  --cov-navy-ink: #F6F1E7;
+  --cov-accent: #4D7C5B;
+  --cov-accent-strong: #3E6A4B;
+  --cov-accent-soft: #E3ECE4;
+  --cov-warn: #925600;
+  --cov-warn-soft: #F7EBD6;
+  --cov-bad: #B42318;
+  --cov-bad-soft: #F9E1DE;
+  --cov-star: #B7791F;
+  --cov-shadow: rgba(32, 36, 48, 0.22);
+  --cov-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --cov-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --cov-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cov-card: #181A1E; --cov-band: #1F2126; --cov-ink: #ECE8E1; --cov-muted: #AEABA3; --cov-faint: #8E8B84;
+    --cov-line: #2E3035; --cov-tint: #1D1F24; --cov-navy: #2C3D63; --cov-navy-ink: #F1ECE2;
+    --cov-accent: #8FC29E; --cov-accent-strong: #A6D3B3; --cov-accent-soft: rgba(143, 194, 158, 0.14);
+    --cov-warn: #E8B65A; --cov-warn-soft: rgba(232, 182, 90, 0.14);
+    --cov-bad: #F59484; --cov-bad-soft: rgba(245, 148, 132, 0.14);
+    --cov-star: #F2C14E; --cov-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --cov-card: #181A1E; --cov-band: #1F2126; --cov-ink: #ECE8E1; --cov-muted: #AEABA3; --cov-faint: #8E8B84;
+  --cov-line: #2E3035; --cov-tint: #1D1F24; --cov-navy: #2C3D63; --cov-navy-ink: #F1ECE2;
+  --cov-accent: #8FC29E; --cov-accent-strong: #A6D3B3; --cov-accent-soft: rgba(143, 194, 158, 0.14);
+  --cov-warn: #E8B65A; --cov-warn-soft: rgba(232, 182, 90, 0.14);
+  --cov-bad: #F59484; --cov-bad-soft: rgba(245, 148, 132, 0.14);
+  --cov-star: #F2C14E; --cov-shadow: rgba(0, 0, 0, 0.6);
+}
+@keyframes cov-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.32) rotate(-10deg); }
+  100% { transform: scale(1); }
+}
+@keyframes cov-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes cov-note-in {
+  from { opacity: 0; transform: translateY(-8px); background: var(--cov-accent-soft); }
+  to { opacity: 1; transform: none; background: transparent; }
+}
