@@ -1,0 +1,53 @@
+/* SEO Audit Scorecard tokens — override these to re-theme the component. */
+:root {
+  --sas-card: #FFFFFF;
+  --sas-ink: #1A1530;
+  --sas-muted: #57506E;
+  --sas-faint: #6B6585;
+  --sas-line: #E6E3EF;
+  --sas-tint: #F6F5FA;
+  --sas-track: #ECE9F4;
+  --sas-violet: #6D28D9;
+  --sas-violet-soft: #F1ECFE;
+  --sas-head: #2E1065;
+  --sas-head-2: #4C1D95;
+  --sas-head-ink: #FFFFFF;
+  --sas-head-muted: #D8CCFF;
+  --sas-head-line: rgba(255, 255, 255, 0.16);
+  --sas-good: #15803D;  --sas-good-soft: #E9F6EE;
+  --sas-warn: #B45309;  --sas-warn-soft: #FEF3E2;
+  --sas-bad: #B91C1C;   --sas-bad-soft: #FDECEC;
+  --sas-note: #6D28D9;  --sas-note-soft: #F1ECFE;
+  --sas-good-hi: #4ADE80; --sas-warn-hi: #FBBF24; --sas-bad-hi: #F87171;
+  --sas-shadow: rgba(30, 16, 64, 0.22);
+  --sas-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --sas-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --sas-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sas-card: #15121F; --sas-ink: #ECE9F5; --sas-muted: #ABA4C2; --sas-faint: #8E87A6;
+    --sas-line: #2A2540; --sas-tint: #1C1829; --sas-track: #2A2540;
+    --sas-violet: #A78BFA; --sas-violet-soft: rgba(167, 139, 250, 0.14);
+    --sas-head: #24124F; --sas-head-2: #3B1D7A; --sas-head-muted: #C4B5FD;
+    --sas-good: #4ADE80; --sas-good-soft: rgba(74, 222, 128, 0.12);
+    --sas-warn: #FBBF24; --sas-warn-soft: rgba(251, 191, 36, 0.12);
+    --sas-bad: #F87171;  --sas-bad-soft: rgba(248, 113, 113, 0.13);
+    --sas-note: #A78BFA; --sas-note-soft: rgba(167, 139, 250, 0.14);
+    --sas-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --sas-card: #15121F; --sas-ink: #ECE9F5; --sas-muted: #ABA4C2; --sas-faint: #8E87A6;
+  --sas-line: #2A2540; --sas-tint: #1C1829; --sas-track: #2A2540;
+  --sas-violet: #A78BFA; --sas-violet-soft: rgba(167, 139, 250, 0.14);
+  --sas-head: #24124F; --sas-head-2: #3B1D7A; --sas-head-muted: #C4B5FD;
+  --sas-good: #4ADE80; --sas-good-soft: rgba(74, 222, 128, 0.12);
+  --sas-warn: #FBBF24; --sas-warn-soft: rgba(251, 191, 36, 0.12);
+  --sas-bad: #F87171;  --sas-bad-soft: rgba(248, 113, 113, 0.13);
+  --sas-note: #A78BFA; --sas-note-soft: rgba(167, 139, 250, 0.14);
+  --sas-shadow: rgba(0, 0, 0, 0.6);
+}
+@keyframes sas-pop { from { transform: scale(.7); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes sas-rise { from { transform: translateY(5px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes sas-sweep { from { left: -40%; } to { left: 100%; } }
