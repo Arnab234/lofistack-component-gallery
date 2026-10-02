@@ -1,0 +1,38 @@
+/* KPI Dashboard tokens — override these to re-theme the component. */
+:root {
+  --kpi-well: #E9EAED;
+  --kpi-tile: #FFFFFF;
+  --kpi-raise: #F6F6F8;
+  --kpi-ink: #18181B;
+  --kpi-muted: #52525B;
+  --kpi-faint: #66666F;
+  --kpi-line: #DEDFE4;
+  --kpi-grid: #ECEDF0;
+  --kpi-accent: #0891B2;
+  --kpi-accent-ink: #0E7490;
+  --kpi-accent-soft: rgba(8, 145, 178, 0.12);
+  --kpi-good: #15803D;
+  --kpi-bad: #B91C1C;
+  --kpi-tip-bg: #18181B;
+  --kpi-tip-ink: #FAFAFA;
+  --kpi-shadow: rgba(24, 24, 27, 0.18);
+  --kpi-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --kpi-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --kpi-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --kpi-well: #0C0D10; --kpi-tile: #17181C; --kpi-raise: #1D1E23; --kpi-ink: #F4F4F5; --kpi-muted: #A1A1AA;
+    --kpi-faint: #8D8D97; --kpi-line: #27282E; --kpi-grid: #222328;
+    --kpi-accent: #22D3EE; --kpi-accent-ink: #67E8F9; --kpi-accent-soft: rgba(34, 211, 238, 0.13);
+    --kpi-good: #4ADE80; --kpi-bad: #F87171; --kpi-tip-bg: #F4F4F5; --kpi-tip-ink: #18181B;
+    --kpi-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --kpi-well: #0C0D10; --kpi-tile: #17181C; --kpi-raise: #1D1E23; --kpi-ink: #F4F4F5; --kpi-muted: #A1A1AA;
+  --kpi-faint: #8D8D97; --kpi-line: #27282E; --kpi-grid: #222328;
+  --kpi-accent: #22D3EE; --kpi-accent-ink: #67E8F9; --kpi-accent-soft: rgba(34, 211, 238, 0.13);
+  --kpi-good: #4ADE80; --kpi-bad: #F87171; --kpi-tip-bg: #F4F4F5; --kpi-tip-ink: #18181B;
+  --kpi-shadow: rgba(0, 0, 0, 0.6);
+}
