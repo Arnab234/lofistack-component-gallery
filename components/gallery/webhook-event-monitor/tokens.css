@@ -1,0 +1,52 @@
+/* Webhook Monitor tokens — override these to re-theme the component. */
+:root {
+  --wem-canvas: #F6F8FA;
+  --wem-card: #FFFFFF;
+  --wem-ink: #1F2328;
+  --wem-muted: #555F6A;
+  --wem-faint: #646E79;
+  --wem-line: #D1D9E0;
+  --wem-line-soft: #E7EBEF;
+  --wem-hover: #F3F6F9;
+  --wem-sel: #EAF1F8;
+  --wem-accent: #34536F;
+  --wem-accent-soft: #E3EBF3;
+  --wem-ok: #1A7F37;   --wem-ok-bg: #DDF4E4;
+  --wem-warn: #8A5300; --wem-warn-bg: #FFF1C9;
+  --wem-err: #C21F2B;  --wem-err-bg: #FFE6E6;
+  --wem-j-key: #23527C; --wem-j-str: #0E6B37; --wem-j-num: #7A3BC2; --wem-j-lit: #9A4700; --wem-j-p: #6A737D;
+  --wem-flash: rgba(52, 83, 111, 0.12);
+  --wem-shadow: rgba(25, 35, 50, 0.16);
+  --wem-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --wem-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --wem-canvas: #0F1318; --wem-card: #151B22; --wem-ink: #E6EDF3; --wem-muted: #A4AEB9; --wem-faint: #8A949F;
+    --wem-line: #2A333D; --wem-line-soft: #212932; --wem-hover: #1A222B; --wem-sel: #1C2A39;
+    --wem-accent: #9DBEDD; --wem-accent-soft: rgba(157, 190, 221, 0.14);
+    --wem-ok: #56D27F; --wem-ok-bg: rgba(86, 210, 127, 0.14);
+    --wem-warn: #E8B647; --wem-warn-bg: rgba(232, 182, 71, 0.15);
+    --wem-err: #FF8079; --wem-err-bg: rgba(255, 128, 121, 0.15);
+    --wem-j-key: #8EC3FF; --wem-j-str: #7EE2A8; --wem-j-num: #D3AEFF; --wem-j-lit: #FFAE66; --wem-j-p: #8A949F;
+    --wem-flash: rgba(157, 190, 221, 0.14); --wem-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --wem-canvas: #0F1318; --wem-card: #151B22; --wem-ink: #E6EDF3; --wem-muted: #A4AEB9; --wem-faint: #8A949F;
+  --wem-line: #2A333D; --wem-line-soft: #212932; --wem-hover: #1A222B; --wem-sel: #1C2A39;
+  --wem-accent: #9DBEDD; --wem-accent-soft: rgba(157, 190, 221, 0.14);
+  --wem-ok: #56D27F; --wem-ok-bg: rgba(86, 210, 127, 0.14);
+  --wem-warn: #E8B647; --wem-warn-bg: rgba(232, 182, 71, 0.15);
+  --wem-err: #FF8079; --wem-err-bg: rgba(255, 128, 121, 0.15);
+  --wem-j-key: #8EC3FF; --wem-j-str: #7EE2A8; --wem-j-num: #D3AEFF; --wem-j-lit: #FFAE66; --wem-j-p: #8A949F;
+  --wem-flash: rgba(157, 190, 221, 0.14); --wem-shadow: rgba(0, 0, 0, 0.6);
+}
+@keyframes wem-ping {
+  0% { transform: scale(0.5); opacity: 0.7; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+@keyframes wem-flash {
+  0% { background: var(--wem-flash); }
+  100% { background: transparent; }
+}
