@@ -1,0 +1,58 @@
+/* Task Board tokens — override these to re-theme the component. */
+:root {
+  --tpb-board: #F6F5F1;
+  --tpb-dots: rgba(27, 31, 39, 0.06);
+  --tpb-card: #FFFFFF;
+  --tpb-ink: #1B1F27;
+  --tpb-muted: #4F5562;
+  --tpb-faint: #656B78;
+  --tpb-line: #E3E1DA;
+  --tpb-tint: #EFEEE9;
+  --tpb-accent: #2F5BD3;
+  --tpb-accent-soft: rgba(47, 91, 211, 0.12);
+  --tpb-late: #B4232C;
+  --tpb-soon: #8A4B06;
+  --tpb-high: #D33F49;
+  --tpb-medium: #D88A0B;
+  --tpb-low: #3E8E63;
+  --tpb-slate: #E6EAF0; --tpb-slate-ink: #3B4A5E; --tpb-slate-solid: #8494AA;
+  --tpb-blue: #DFE9FC;  --tpb-blue-ink: #1F4FBF;  --tpb-blue-solid: #3C6FE0;
+  --tpb-amber: #FBEFD3; --tpb-amber-ink: #84500A; --tpb-amber-solid: #E0A021;
+  --tpb-green: #DCF1E3; --tpb-green-ink: #17663A; --tpb-green-solid: #2E9E5B;
+  --tpb-shadow: rgba(27, 31, 39, 0.28);
+  --tpb-shadow-sm: rgba(27, 31, 39, 0.06);
+  --tpb-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --tpb-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --tpb-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --tpb-board: #15171C; --tpb-dots: rgba(232, 234, 238, 0.05); --tpb-card: #1F232B; --tpb-ink: #E8EAEE;
+    --tpb-muted: #A7ADB8; --tpb-faint: #8D94A0; --tpb-line: #2D323C; --tpb-tint: #232831;
+    --tpb-accent: #7EA2FF; --tpb-accent-soft: rgba(126, 162, 255, 0.16);
+    --tpb-late: #FF8A8A; --tpb-soon: #F3C669; --tpb-high: #FF6B74; --tpb-medium: #F2B23E; --tpb-low: #5CC98A;
+    --tpb-slate: #222833; --tpb-slate-ink: #B7C2D3; --tpb-slate-solid: #7D8DA5;
+    --tpb-blue: #1B2A47;  --tpb-blue-ink: #A3BEFF;  --tpb-blue-solid: #5B8BFF;
+    --tpb-amber: #33280F; --tpb-amber-ink: #F3C669; --tpb-amber-solid: #E3A92C;
+    --tpb-green: #142D1E; --tpb-green-ink: #84DCA4; --tpb-green-solid: #3DBE73;
+    --tpb-shadow: rgba(0, 0, 0, 0.7); --tpb-shadow-sm: rgba(0, 0, 0, 0.3);
+  }
+}
+:root[data-theme="dark"] {
+  --tpb-board: #15171C; --tpb-dots: rgba(232, 234, 238, 0.05); --tpb-card: #1F232B; --tpb-ink: #E8EAEE;
+  --tpb-muted: #A7ADB8; --tpb-faint: #8D94A0; --tpb-line: #2D323C; --tpb-tint: #232831;
+  --tpb-accent: #7EA2FF; --tpb-accent-soft: rgba(126, 162, 255, 0.16);
+  --tpb-late: #FF8A8A; --tpb-soon: #F3C669; --tpb-high: #FF6B74; --tpb-medium: #F2B23E; --tpb-low: #5CC98A;
+  --tpb-slate: #222833; --tpb-slate-ink: #B7C2D3; --tpb-slate-solid: #7D8DA5;
+  --tpb-blue: #1B2A47;  --tpb-blue-ink: #A3BEFF;  --tpb-blue-solid: #5B8BFF;
+  --tpb-amber: #33280F; --tpb-amber-ink: #F3C669; --tpb-amber-solid: #E3A92C;
+  --tpb-green: #142D1E; --tpb-green-ink: #84DCA4; --tpb-green-solid: #3DBE73;
+  --tpb-shadow: rgba(0, 0, 0, 0.7); --tpb-shadow-sm: rgba(0, 0, 0, 0.3);
+}
+@keyframes tpb-land {
+  0% { box-shadow: 0 0 0 3px var(--tpb-c-solid), 0 16px 28px -18px var(--tpb-shadow); transform: scale(1.02); }
+  100% { box-shadow: 0 1px 2px var(--tpb-shadow-sm), 0 8px 16px -14px var(--tpb-shadow); transform: none; }
+}
+@keyframes tpb-pop {
+  from { opacity: 0; transform: translateY(-4px) scale(0.98); }
+}
