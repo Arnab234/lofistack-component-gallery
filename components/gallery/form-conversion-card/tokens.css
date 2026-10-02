@@ -1,0 +1,41 @@
+/* Form Conversion Card tokens — override these to re-theme the component. */
+:root {
+  --fcc-card: #FFFFFF;
+  --fcc-ink: #0B2730;
+  --fcc-muted: #44606A;
+  --fcc-faint: #5B747D;
+  --fcc-line: #DCEBEE;
+  --fcc-tint: #EEF9FB;
+  --fcc-tint-2: #D6F1F6;
+  --fcc-skel: #E1EEF1;
+  --fcc-accent: #155E75;
+  --fcc-accent-2: #1C88A8;
+  --fcc-accent-ink: #FFFFFF;
+  --fcc-accent-soft: rgba(21, 94, 117, 0.12);
+  --fcc-worst: #AE3A0B;
+  --fcc-worst-soft: rgba(174, 58, 11, 0.09);
+  --fcc-good: #0F7A5A;
+  --fcc-shadow: rgba(11, 39, 48, 0.22);
+  --fcc-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --fcc-round: ui-rounded, "SF Pro Rounded", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --fcc-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fcc-card: #0D1F25; --fcc-ink: #E2F5F8; --fcc-muted: #9DBCC4; --fcc-faint: #85A5AE;
+    --fcc-line: #1D363E; --fcc-tint: #10272E; --fcc-tint-2: #133943; --fcc-skel: #1A3540;
+    --fcc-accent: #67E8F9; --fcc-accent-2: #2BB9D3; --fcc-accent-ink: #062027; --fcc-accent-soft: rgba(103, 232, 249, 0.13);
+    --fcc-worst: #FF9466; --fcc-worst-soft: rgba(255, 148, 102, 0.13); --fcc-good: #5EDBB0;
+    --fcc-shadow: rgba(0, 0, 0, 0.65);
+  }
+}
+:root[data-theme="dark"] {
+  --fcc-card: #0D1F25; --fcc-ink: #E2F5F8; --fcc-muted: #9DBCC4; --fcc-faint: #85A5AE;
+  --fcc-line: #1D363E; --fcc-tint: #10272E; --fcc-tint-2: #133943; --fcc-skel: #1A3540;
+  --fcc-accent: #67E8F9; --fcc-accent-2: #2BB9D3; --fcc-accent-ink: #062027; --fcc-accent-soft: rgba(103, 232, 249, 0.13);
+  --fcc-worst: #FF9466; --fcc-worst-soft: rgba(255, 148, 102, 0.13); --fcc-good: #5EDBB0;
+  --fcc-shadow: rgba(0, 0, 0, 0.65);
+}
+@keyframes fcc-in {
+  from { opacity: 0; transform: translateY(-6px); }
+}
