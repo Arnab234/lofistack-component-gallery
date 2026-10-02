@@ -1,0 +1,58 @@
+/* Campaign Status Card tokens — override these to re-theme the component. */
+:root {
+  --csc-card: #FFFFFF;
+  --csc-band: #F2F8FC;
+  --csc-ink: #0F1B2A;
+  --csc-muted: #4C5A6A;
+  --csc-faint: #5F6C7B;
+  --csc-line: #E1E8EF;
+  --csc-line-strong: #CAD5E0;
+  --csc-tint: #F5F8FB;
+  --csc-accent: #0284C7;
+  --csc-accent-ink: #0369A1;
+  --csc-accent-soft: #E0F2FE;
+  --csc-draft: #52606F;     --csc-draft-bg: #EEF2F6;
+  --csc-scheduled: #0369A1; --csc-scheduled-bg: #E0F2FE;
+  --csc-live: #15803D;      --csc-live-bg: #DCFCE7;
+  --csc-paused: #B45309;    --csc-paused-bg: #FEF3C7;
+  --csc-completed: #334155; --csc-completed-bg: #E2E8F0;
+  --csc-danger: #B91C1C;    --csc-danger-ink: #FFFFFF;
+  --csc-primary: #0369A1;   --csc-primary-ink: #FFFFFF; --csc-primary-hover: #075985;
+  --csc-shadow: rgba(15, 40, 70, 0.2);
+  --csc-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --csc-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --csc-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --csc-card: #0F1923; --csc-band: #112130; --csc-ink: #E6EEF6; --csc-muted: #A3B3C4; --csc-faint: #8798AB;
+  --csc-line: #1F2D3C; --csc-line-strong: #2C3D50; --csc-tint: #132230;
+  --csc-accent: #38BDF8; --csc-accent-ink: #7DD3FC; --csc-accent-soft: rgba(56, 189, 248, 0.14);
+  --csc-draft: #B4C1CF; --csc-draft-bg: rgba(148, 163, 184, 0.14);
+  --csc-scheduled: #7DD3FC; --csc-scheduled-bg: rgba(56, 189, 248, 0.15);
+  --csc-live: #4ADE80; --csc-live-bg: rgba(74, 222, 128, 0.13);
+  --csc-paused: #FBBF24; --csc-paused-bg: rgba(251, 191, 36, 0.14);
+  --csc-completed: #CBD5E1; --csc-completed-bg: rgba(203, 213, 225, 0.12);
+  --csc-danger: #F87171; --csc-danger-ink: #2A0A0A; --csc-shadow: rgba(0, 0, 0, 0.6);
+  --csc-primary: #38BDF8; --csc-primary-ink: #04202F; --csc-primary-hover: #7DD3FC;
+  }
+}
+:root[data-theme="dark"] {
+  --csc-card: #0F1923; --csc-band: #112130; --csc-ink: #E6EEF6; --csc-muted: #A3B3C4; --csc-faint: #8798AB;
+  --csc-line: #1F2D3C; --csc-line-strong: #2C3D50; --csc-tint: #132230;
+  --csc-accent: #38BDF8; --csc-accent-ink: #7DD3FC; --csc-accent-soft: rgba(56, 189, 248, 0.14);
+  --csc-draft: #B4C1CF; --csc-draft-bg: rgba(148, 163, 184, 0.14);
+  --csc-scheduled: #7DD3FC; --csc-scheduled-bg: rgba(56, 189, 248, 0.15);
+  --csc-live: #4ADE80; --csc-live-bg: rgba(74, 222, 128, 0.13);
+  --csc-paused: #FBBF24; --csc-paused-bg: rgba(251, 191, 36, 0.14);
+  --csc-completed: #CBD5E1; --csc-completed-bg: rgba(203, 213, 225, 0.12);
+  --csc-danger: #F87171; --csc-danger-ink: #2A0A0A; --csc-shadow: rgba(0, 0, 0, 0.6);
+  --csc-primary: #38BDF8; --csc-primary-ink: #04202F; --csc-primary-hover: #7DD3FC;
+}
+@keyframes csc-ping {
+  0% { transform: scale(.6); opacity: .8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+@keyframes csc-pop {
+  from { opacity: 0; transform: translateY(8px) scale(.98); }
+}
