@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* Per-component design tokens (light + dark). Generated list — see lib/registry.ts */
+@import "./tokens.css";
+
+/* ------------------------------------------------------------------
+   Theme: light by default, dark from the OS or from the toggle.
+   html[data-theme="light" | "dark"] overrides the OS setting.
+   ------------------------------------------------------------------ */
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme="light"]) *) {
+      @slot;
+    }
+  }
+}
+
+:root {
+  color-scheme: light;
+  --lsg-bg: #eef0f3;
+  --lsg-surface: #ffffff;
+  --lsg-stage: #f4f5f8;
+  --lsg-panel: #f9fafc;
+  --lsg-tint: #f3f5fa;
+  --lsg-ink: #11161d;
+  --lsg-muted: #59626f;
+  --lsg-faint: #89919d;
+  --lsg-line: #d9dde4;
+  --lsg-hover: rgba(110, 122, 138, 0.12);
+  --lsg-accent: #2446d8;
+  --lsg-nav-bg: rgba(248, 249, 251, 0.8);
+  --lsg-shadow: rgba(17, 22, 29, 0.2);
+  --lsg-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --lsg-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --lsg-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --lsg-bg: #0b0e13; --lsg-surface: #141920; --lsg-stage: #0f131a; --lsg-panel: #121821; --lsg-tint: #1a2130;
+    --lsg-ink: #e7ebf0; --lsg-muted: #98a1ae; --lsg-faint: #6b7481; --lsg-line: #242a33;
+    --lsg-hover: rgba(160, 170, 185, 0.1); --lsg-accent: #8fa3ff; --lsg-nav-bg: rgba(12, 15, 20, 0.78);
+    --lsg-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --lsg-bg: #0b0e13; --lsg-surface: #141920; --lsg-stage: #0f131a; --lsg-panel: #121821; --lsg-tint: #1a2130;
+  --lsg-ink: #e7ebf0; --lsg-muted: #98a1ae; --lsg-faint: #6b7481; --lsg-line: #242a33;
+  --lsg-hover: rgba(160, 170, 185, 0.1); --lsg-accent: #8fa3ff; --lsg-nav-bg: rgba(12, 15, 20, 0.78);
+  --lsg-shadow: rgba(0, 0, 0, 0.6);
+}
+
+@theme inline {
+  --color-ground: var(--lsg-bg);
+  --color-surface: var(--lsg-surface);
+  --color-stage: var(--lsg-stage);
+  --color-panel: var(--lsg-panel);
+  --color-tint: var(--lsg-tint);
+  --color-ink: var(--lsg-ink);
+  --color-muted: var(--lsg-muted);
+  --color-faint: var(--lsg-faint);
+  --color-line: var(--lsg-line);
+  --color-hover: var(--lsg-hover);
+  --color-accent: var(--lsg-accent);
+  --color-shade: var(--lsg-shadow);
+  --font-sans: var(--lsg-sans);
+  --font-display: var(--lsg-display);
+  --font-mono: var(--lsg-mono);
+  --ease-out-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--lsg-bg);
+  color: var(--lsg-ink);
+  font: 400 15px/1.55 var(--lsg-sans);
+}
+[hidden] { display: none !important; }
+
+/* Embedded previews (homepage cards) have no chrome and never scroll. */
+html.lsg-embed body { overflow: hidden; background: transparent; }
+
+/* Horizontally scrolling nav: fade the edge that has more links behind it. */
+.lsg-links { scrollbar-width: none; }
+.lsg-links::-webkit-scrollbar { display: none; }
+.lsg-links[data-scroll="middle"] { mask-image: linear-gradient(to right, transparent, #000 28px, #000 calc(100% - 28px), transparent); }
+.lsg-links[data-scroll="start"] { mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
+.lsg-links[data-scroll="end"] { mask-image: linear-gradient(to right, transparent, #000 28px); }
+
+/* Dotted stage background behind every preview. */
+.lsg-dots {
+  background-image: radial-gradient(var(--lsg-line) 1px, transparent 1.2px);
+  background-size: 18px 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
