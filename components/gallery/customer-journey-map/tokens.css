@@ -1,0 +1,50 @@
+/* Customer Journey tokens — override these to re-theme the component. */
+:root {
+  --cjm-card: #FFFCF7;
+  --cjm-ink: #1F1A17;
+  --cjm-muted: #574E47;
+  --cjm-faint: #6B625A;
+  --cjm-line: #EBE3D8;
+  --cjm-tint: #F6F0E7;
+  --cjm-peach: #FDE3D3;  --cjm-peach-strong: #B4532A;
+  --cjm-butter: #FBF0C2; --cjm-butter-strong: #8C6A04;
+  --cjm-mint: #D6F0E0;   --cjm-mint-strong: #23825A;
+  --cjm-sky: #D8E9F8;    --cjm-sky-strong: #2F6FB0;
+  --cjm-lilac: #E7DFF6;  --cjm-lilac-strong: #6E4FBF;
+  --cjm-pos: #23825A;
+  --cjm-neu: #B08A0A;
+  --cjm-neg: #CC4A33;
+  --cjm-curve: #1F1A17;
+  --cjm-shadow: rgba(52, 36, 22, 0.22);
+  --cjm-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --cjm-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --cjm-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --cjm-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cjm-card: #1A1613; --cjm-ink: #F3ECE4; --cjm-muted: #C2B6AA; --cjm-faint: #A39689;
+    --cjm-line: #2F2823; --cjm-tint: #231E1A;
+    --cjm-peach: #3A261D;  --cjm-peach-strong: #F59A73;
+    --cjm-butter: #352D15; --cjm-butter-strong: #E8C04A;
+    --cjm-mint: #1B3126;   --cjm-mint-strong: #5CCB94;
+    --cjm-sky: #1C2B3B;    --cjm-sky-strong: #6FAEEA;
+    --cjm-lilac: #2A223D;  --cjm-lilac-strong: #A98AF0;
+    --cjm-pos: #5CCB94; --cjm-neu: #E8C04A; --cjm-neg: #FF8A73; --cjm-curve: #F3ECE4;
+    --cjm-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --cjm-card: #1A1613; --cjm-ink: #F3ECE4; --cjm-muted: #C2B6AA; --cjm-faint: #A39689;
+  --cjm-line: #2F2823; --cjm-tint: #231E1A;
+  --cjm-peach: #3A261D;  --cjm-peach-strong: #F59A73;
+  --cjm-butter: #352D15; --cjm-butter-strong: #E8C04A;
+  --cjm-mint: #1B3126;   --cjm-mint-strong: #5CCB94;
+  --cjm-sky: #1C2B3B;    --cjm-sky-strong: #6FAEEA;
+  --cjm-lilac: #2A223D;  --cjm-lilac-strong: #A98AF0;
+  --cjm-pos: #5CCB94; --cjm-neu: #E8C04A; --cjm-neg: #FF8A73; --cjm-curve: #F3ECE4;
+  --cjm-shadow: rgba(0, 0, 0, 0.6);
+}
+@keyframes cjm-fade {
+  from { opacity: 0; transform: translateY(4px); }
+}
