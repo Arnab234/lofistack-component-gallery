@@ -1,0 +1,51 @@
+/* Team Member Performance tokens — override these to re-theme the component. */
+:root {
+  --tmp-card: #FCFBFF;
+  --tmp-raise: #FFFFFF;
+  --tmp-ink: #1C1330;
+  --tmp-muted: #5A5070;
+  --tmp-faint: #6D6383;
+  --tmp-line: #E7E2F1;
+  --tmp-tint: #F4F1FA;
+  --tmp-purple: #5B21B6;
+  --tmp-purple-soft: rgba(91, 33, 182, 0.08);
+  --tmp-gold: #B45309;
+  --tmp-gold-soft: rgba(180, 83, 9, 0.10);
+  --tmp-good: #15803D;
+  --tmp-bad: #B91C1C;
+  --tmp-shadow: rgba(40, 18, 80, 0.22);
+  --tmp-av-sat: 58%;
+  --tmp-av-bg: 90%;
+  --tmp-av-fg: 27%;
+  /* podium band stays deep purple in both themes */
+  --tmp-pod: #22094F;
+  --tmp-pod-2: #3F1A8C;
+  --tmp-pod-ink: #F6F1FF;
+  --tmp-pod-muted: #CBBEF0;
+  --tmp-pod-line: rgba(255, 255, 255, 0.14);
+  --tmp-pod-step: rgba(255, 255, 255, 0.07);
+  --tmp-medal-1: #FBBF24;
+  --tmp-medal-2: #DCD6EC;
+  --tmp-medal-3: #E9A97A;
+  --tmp-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --tmp-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --tmp-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --tmp-card: #15101F; --tmp-raise: #1D1729; --tmp-ink: #EEE9F8; --tmp-muted: #B3A9C7; --tmp-faint: #948AAA;
+    --tmp-line: #2B233A; --tmp-tint: #1B1526; --tmp-purple: #C4B5FD; --tmp-purple-soft: rgba(196, 181, 253, 0.10);
+    --tmp-gold: #FBBF24; --tmp-gold-soft: rgba(251, 191, 36, 0.12); --tmp-good: #6EE7A0; --tmp-bad: #FCA5A5;
+    --tmp-shadow: rgba(0, 0, 0, 0.65); --tmp-av-sat: 38%; --tmp-av-bg: 26%; --tmp-av-fg: 86%;
+    --tmp-pod: #170636; --tmp-pod-2: #2D1268;
+  }
+}
+:root[data-theme="dark"] {
+  --tmp-card: #15101F; --tmp-raise: #1D1729; --tmp-ink: #EEE9F8; --tmp-muted: #B3A9C7; --tmp-faint: #948AAA;
+  --tmp-line: #2B233A; --tmp-tint: #1B1526; --tmp-purple: #C4B5FD; --tmp-purple-soft: rgba(196, 181, 253, 0.10);
+  --tmp-gold: #FBBF24; --tmp-gold-soft: rgba(251, 191, 36, 0.12); --tmp-good: #6EE7A0; --tmp-bad: #FCA5A5;
+  --tmp-shadow: rgba(0, 0, 0, 0.65); --tmp-av-sat: 38%; --tmp-av-bg: 26%; --tmp-av-fg: 86%;
+  --tmp-pod: #170636; --tmp-pod-2: #2D1268;
+}
+@keyframes tmp-open { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@keyframes tmp-grow { from { width: 0; } }
