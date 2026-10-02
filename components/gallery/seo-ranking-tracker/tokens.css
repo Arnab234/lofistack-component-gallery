@@ -1,0 +1,47 @@
+/* SEO Ranking Tracker tokens — override these to re-theme the component. */
+:root {
+  --srt-card: #FFFFFF;
+  --srt-ink: #0E1A13;
+  --srt-muted: #4D5C53;
+  --srt-faint: #64736A;
+  --srt-line: #E2E8E4;
+  --srt-tint: #F3F7F4;
+  --srt-head: #F8FAF9;
+  --srt-hover: #F6F9F7;
+  --srt-accent: #15803D;
+  --srt-accent-ink: #FFFFFF;
+  --srt-accent-soft: #E1F4E7;
+  --srt-up: #15803D;
+  --srt-down: #B91C1C;
+  --srt-down-soft: #FBE7E7;
+  --srt-flat: #64736A;
+  --srt-band: rgba(21, 128, 61, 0.07);
+  --srt-d1: #15803D; --srt-d2: #4FAE6E; --srt-d3: #A7D7B5; --srt-d4: #D5E3DA; --srt-d5: #EEF2EF;
+  --srt-shadow: rgba(14, 40, 24, 0.18);
+  --srt-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --srt-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --srt-card: #101713; --srt-ink: #E5EEE8; --srt-muted: #A2B3A8; --srt-faint: #879A8E;
+    --srt-line: #22302A; --srt-tint: #15201A; --srt-head: #131C17; --srt-hover: #131D18;
+    --srt-accent: #4ADE80; --srt-accent-ink: #062611; --srt-accent-soft: rgba(74, 222, 128, 0.14);
+    --srt-up: #4ADE80; --srt-down: #F87171; --srt-down-soft: rgba(248, 113, 113, 0.14); --srt-flat: #879A8E;
+    --srt-band: rgba(74, 222, 128, 0.06);
+    --srt-d1: #4ADE80; --srt-d2: #2FA65A; --srt-d3: #1F6B3C; --srt-d4: #2A3A31; --srt-d5: #1A241F;
+    --srt-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --srt-card: #101713; --srt-ink: #E5EEE8; --srt-muted: #A2B3A8; --srt-faint: #879A8E;
+  --srt-line: #22302A; --srt-tint: #15201A; --srt-head: #131C17; --srt-hover: #131D18;
+  --srt-accent: #4ADE80; --srt-accent-ink: #062611; --srt-accent-soft: rgba(74, 222, 128, 0.14);
+  --srt-up: #4ADE80; --srt-down: #F87171; --srt-down-soft: rgba(248, 113, 113, 0.14); --srt-flat: #879A8E;
+  --srt-band: rgba(74, 222, 128, 0.06);
+  --srt-d1: #4ADE80; --srt-d2: #2FA65A; --srt-d3: #1F6B3C; --srt-d4: #2A3A31; --srt-d5: #1A241F;
+  --srt-shadow: rgba(0, 0, 0, 0.6);
+}
+@keyframes srt-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
