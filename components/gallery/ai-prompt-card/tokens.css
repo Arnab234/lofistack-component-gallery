@@ -1,0 +1,39 @@
+/* AI Prompt Card tokens — override these to re-theme the component.
+   The editor stays dark in both themes, like a real code editor. */
+:root {
+  --apc-bg: #0F1024;
+  --apc-bar: #0A0B1B;
+  --apc-panel: #131430;
+  --apc-raise: #1B1C3C;
+  --apc-line: #262850;
+  --apc-line-soft: #1A1B39;
+  --apc-text: #E4E5F7;
+  --apc-muted: #A6A8CF;
+  --apc-faint: #7F82B0;
+  --apc-violet: #A78BFA;
+  --apc-violet-strong: #7C3AED;
+  --apc-violet-deep: #6D28D9;
+  --apc-violet-soft: rgba(139, 92, 246, 0.18);
+  --apc-amber: #FCD34D;
+  --apc-amber-bg: rgba(251, 191, 36, 0.13);
+  --apc-amber-line: rgba(251, 191, 36, 0.4);
+  --apc-green: #6EE7B7;
+  --apc-red: #FDA4AF;
+  --apc-red-bg: rgba(251, 113, 133, 0.14);
+  --apc-edge: rgba(255, 255, 255, 0.06);
+  --apc-shadow: rgba(23, 16, 60, 0.45);
+  --apc-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --apc-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --apc-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --apc-edge: rgba(167, 139, 250, 0.16); --apc-shadow: rgba(0, 0, 0, 0.7);
+  }
+}
+:root[data-theme="dark"] {
+  --apc-edge: rgba(167, 139, 250, 0.16); --apc-shadow: rgba(0, 0, 0, 0.7);
+}
+@keyframes apc-blink {
+  50% { opacity: 0; }
+}
