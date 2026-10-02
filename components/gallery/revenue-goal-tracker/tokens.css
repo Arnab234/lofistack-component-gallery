@@ -1,0 +1,47 @@
+/* Revenue Goal Tracker tokens — override these to re-theme the component. */
+:root {
+  --rgt-card: #FFFFFF;
+  --rgt-raise: #FFFFFF;
+  --rgt-ink: #0F172A;
+  --rgt-muted: #475569;
+  --rgt-faint: #5F6E86;
+  --rgt-line: #E2E8F2;
+  --rgt-tint: #F1F5FC;
+  --rgt-track: #E5ECF8;
+  --rgt-accent: #2563EB;
+  --rgt-accent-ink: #1D4ED8;
+  --rgt-accent-2: #60A5FA;
+  --rgt-accent-soft: rgba(37, 99, 235, 0.10);
+  --rgt-on-accent: #FFFFFF;
+  --rgt-mesh-1: rgba(37, 99, 235, 0.13);
+  --rgt-mesh-2: rgba(96, 165, 250, 0.16);
+  --rgt-mesh-3: rgba(129, 140, 248, 0.10);
+  --rgt-good: #15803D;
+  --rgt-warn: #B45309;
+  --rgt-bad: #B91C1C;
+  --rgt-shadow: rgba(15, 35, 90, 0.20);
+  --rgt-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --rgt-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --rgt-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --rgt-card: #0E1526; --rgt-raise: #131C30; --rgt-ink: #E8EEF9; --rgt-muted: #A7B4CA; --rgt-faint: #8797B2;
+    --rgt-line: #1F2A40; --rgt-tint: #141D31; --rgt-track: #1A2440;
+    --rgt-accent: #2563EB; --rgt-accent-ink: #93C5FD; --rgt-accent-2: #60A5FA; --rgt-accent-soft: rgba(96, 165, 250, 0.14);
+    --rgt-on-accent: #FFFFFF;
+    --rgt-mesh-1: rgba(59, 130, 246, 0.20); --rgt-mesh-2: rgba(96, 165, 250, 0.12); --rgt-mesh-3: rgba(129, 140, 248, 0.12);
+    --rgt-good: #4ADE80; --rgt-warn: #FBBF24; --rgt-bad: #F87171; --rgt-shadow: rgba(0, 0, 0, 0.62);
+  }
+}
+:root[data-theme="dark"] {
+  --rgt-card: #0E1526; --rgt-raise: #131C30; --rgt-ink: #E8EEF9; --rgt-muted: #A7B4CA; --rgt-faint: #8797B2;
+  --rgt-line: #1F2A40; --rgt-tint: #141D31; --rgt-track: #1A2440;
+  --rgt-accent: #2563EB; --rgt-accent-ink: #93C5FD; --rgt-accent-2: #60A5FA; --rgt-accent-soft: rgba(96, 165, 250, 0.14);
+  --rgt-on-accent: #FFFFFF;
+  --rgt-mesh-1: rgba(59, 130, 246, 0.20); --rgt-mesh-2: rgba(96, 165, 250, 0.12); --rgt-mesh-3: rgba(129, 140, 248, 0.12);
+  --rgt-good: #4ADE80; --rgt-warn: #FBBF24; --rgt-bad: #F87171; --rgt-shadow: rgba(0, 0, 0, 0.62);
+}
+@keyframes rgt-shine { 0% { transform: translateX(-100%); } 55%, 100% { transform: translateX(100%); } }
+@keyframes rgt-pulse { 0%, 100% { box-shadow: 0 0 0 0 var(--rgt-accent-soft); } 50% { box-shadow: 0 0 0 6px var(--rgt-accent-soft); } }
+@keyframes rgt-in { from { opacity: 0; transform: translateY(-6px); background: var(--rgt-accent-soft); } to { opacity: 1; transform: none; } }
