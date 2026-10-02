@@ -1,0 +1,42 @@
+/* Pricing Comparison tokens — override these to re-theme the component. */
+:root {
+  --pcc-card: #FBF8F3;
+  --pcc-raise: #FFFFFF;
+  --pcc-ink: #1C1815;
+  --pcc-muted: #625A51;
+  --pcc-faint: #7A7167;
+  --pcc-line: #E6DFD4;
+  --pcc-tint: #F3EDE4;
+  --pcc-accent: #C2470F;
+  --pcc-accent-deep: #A13A0B;
+  --pcc-accent-ink: #FFF8F3;
+  --pcc-accent-soft: #FBE6D8;
+  --pcc-highlight: rgba(255, 255, 255, 0.7);
+  --pcc-shadow: rgba(48, 30, 14, 0.24);
+  --pcc-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --pcc-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --pcc-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --pcc-card: #1B1815; --pcc-raise: #25201B; --pcc-ink: #F2ECE4; --pcc-muted: #B3A99E; --pcc-faint: #8E8479;
+    --pcc-line: #322C26; --pcc-tint: #221E1A; --pcc-accent: #FF8F54; --pcc-accent-deep: #FFA875;
+    --pcc-accent-ink: #2A1206; --pcc-accent-soft: rgba(255, 143, 84, 0.15);
+    --pcc-highlight: rgba(255, 255, 255, 0.04); --pcc-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --pcc-card: #1B1815; --pcc-raise: #25201B; --pcc-ink: #F2ECE4; --pcc-muted: #B3A99E; --pcc-faint: #8E8479;
+  --pcc-line: #322C26; --pcc-tint: #221E1A; --pcc-accent: #FF8F54; --pcc-accent-deep: #FFA875;
+  --pcc-accent-ink: #2A1206; --pcc-accent-soft: rgba(255, 143, 84, 0.15);
+  --pcc-highlight: rgba(255, 255, 255, 0.04); --pcc-shadow: rgba(0, 0, 0, 0.6);
+}
+/* price swap on billing change (the legacy element used the Web Animations API) */
+@keyframes pcc-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pcc-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
