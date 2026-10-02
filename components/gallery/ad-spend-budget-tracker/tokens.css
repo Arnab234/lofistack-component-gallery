@@ -1,0 +1,46 @@
+/* Ad Spend Budget Tracker tokens — override these to re-theme the component. */
+:root {
+  --abt-card: #FFFFFF;
+  --abt-head: #F4F7FA;
+  --abt-ink: #0F172A;
+  --abt-muted: #475569;
+  --abt-faint: #5F6E82;
+  --abt-line: #E2E8F0;
+  --abt-track: #EAEFF4;
+  --abt-tick: #94A3B8;
+  --abt-budget: #334155;
+  --abt-ok: #0D9488;
+  --abt-ok-ink: #0F766E;
+  --abt-ok-soft: #DDF3F0;
+  --abt-over: #EA580C;
+  --abt-over-ink: #B93D08;
+  --abt-over-soft: #FDEADF;
+  --abt-under: #5470A8;
+  --abt-under-ink: #3F5A8F;
+  --abt-under-soft: #E5EBF6;
+  --abt-focus: #0F766E;
+  --abt-tip: #0F172A;
+  --abt-tip-ink: #F1F5F9;
+  --abt-shadow: rgba(15, 23, 42, 0.2);
+  --abt-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --abt-num: "Bahnschrift", "DIN Alternate", "Roboto Condensed", "Arial Narrow", sans-serif;
+  --abt-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --abt-card: #131A24; --abt-head: #17202C; --abt-ink: #E5EAF1; --abt-muted: #A0ACBC; --abt-faint: #8592A5;
+    --abt-line: #263142; --abt-track: #1E2835; --abt-tick: #5B6A80; --abt-budget: #CBD5E1;
+    --abt-ok: #2DD4BF; --abt-ok-ink: #5EEAD4; --abt-ok-soft: rgba(45, 212, 191, 0.13);
+    --abt-over: #FB923C; --abt-over-ink: #FDBA74; --abt-over-soft: rgba(251, 146, 60, 0.14);
+    --abt-under: #8EA6D8; --abt-under-ink: #A9BCE4; --abt-under-soft: rgba(142, 166, 216, 0.14);
+    --abt-focus: #2DD4BF; --abt-tip: #E5EAF1; --abt-tip-ink: #0F172A; --abt-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --abt-card: #131A24; --abt-head: #17202C; --abt-ink: #E5EAF1; --abt-muted: #A0ACBC; --abt-faint: #8592A5;
+  --abt-line: #263142; --abt-track: #1E2835; --abt-tick: #5B6A80; --abt-budget: #CBD5E1;
+  --abt-ok: #2DD4BF; --abt-ok-ink: #5EEAD4; --abt-ok-soft: rgba(45, 212, 191, 0.13);
+  --abt-over: #FB923C; --abt-over-ink: #FDBA74; --abt-over-soft: rgba(251, 146, 60, 0.14);
+  --abt-under: #8EA6D8; --abt-under-ink: #A9BCE4; --abt-under-soft: rgba(142, 166, 216, 0.14);
+  --abt-focus: #2DD4BF; --abt-tip: #E5EAF1; --abt-tip-ink: #0F172A; --abt-shadow: rgba(0, 0, 0, 0.6);
+}
