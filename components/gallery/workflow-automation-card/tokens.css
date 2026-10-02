@@ -1,0 +1,49 @@
+/* Workflow Automation tokens — the card is blueprint-dark in both themes. Override these to re-theme it. */
+:root {
+  --wac-bg: #0B1B33;
+  --wac-panel: #0D2140;
+  --wac-node: #10284A;
+  --wac-node-hi: #143159;
+  --wac-ink: #F1F6FD;
+  --wac-muted: #AFC1DA;
+  --wac-faint: #8399B8;
+  --wac-line: rgba(148, 186, 232, 0.18);
+  --wac-line-strong: rgba(148, 186, 232, 0.32);
+  --wac-grid: rgba(56, 189, 248, 0.06);
+  --wac-grid-major: rgba(56, 189, 248, 0.12);
+  --wac-wire: rgba(103, 232, 249, 0.42);
+  --wac-cyan: #22D3EE;
+  --wac-teal: #2DD4BF;
+  --wac-amber: #FBBF24;
+  --wac-peri: #A5B4FC;
+  --wac-ok: #4ADE80;
+  --wac-stop: #FB7185;
+  --wac-on-accent: #04202A;
+  --wac-shadow: rgba(2, 8, 20, 0.55);
+  --wac-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --wac-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --wac-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --wac-bg: #0B1B33; --wac-panel: #0C1F3C; --wac-line: rgba(148, 186, 232, 0.2);
+  --wac-shadow: rgba(0, 0, 0, 0.7);
+  }
+}
+:root[data-theme="dark"] {
+  --wac-bg: #0B1B33; --wac-panel: #0C1F3C; --wac-line: rgba(148, 186, 232, 0.2);
+  --wac-shadow: rgba(0, 0, 0, 0.7);
+}
+@keyframes wac-flow {
+  to { stroke-dashoffset: -12; }
+}
+@keyframes wac-pulse {
+  50% { box-shadow: inset 0 0 0 1px var(--wac-t), 0 0 0 5px color-mix(in oklab, var(--wac-t) 18%, transparent); }
+}
+@keyframes wac-blink {
+  50% { opacity: 0.3; }
+}
+@keyframes wac-in {
+  from { opacity: 0; transform: translateX(-6px); }
+  to { opacity: 1; transform: none; }
+}
