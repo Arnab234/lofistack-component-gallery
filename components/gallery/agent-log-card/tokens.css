@@ -1,0 +1,48 @@
+/* Agent Log Card tokens — override these to re-theme the component. */
+:root {
+  --alc-card: #FCFDFD;
+  --alc-ink: #12171C;
+  --alc-muted: #5A646E;
+  --alc-faint: #8C96A0;
+  --alc-line: #DCE2E6;
+  --alc-panel: #F1F4F5;
+  --alc-accent: #1E6B62;
+  --alc-accent-soft: #DDEEEB;
+  --alc-on-accent: #F4FBFA;
+  --alc-glow: rgba(30, 107, 98, 0.09);
+  --alc-shadow: rgba(18, 30, 38, 0.22);
+  --alc-ground: var(--lsg-stage); /* colour behind the card — used by the perforation notches */
+  --alc-draft: #9A6511;      --alc-draft-bg: #F8EDD8;
+  --alc-selected: #2B57C4;   --alc-selected-bg: #E2E9FA;
+  --alc-submitted: #1D7A45;  --alc-submitted-bg: #DDF1E4;
+  --alc-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --alc-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --alc-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --alc-card: #181D21; --alc-ink: #E9EDF0; --alc-muted: #9CA6B0; --alc-faint: #6E7882;
+    --alc-line: #2A3137; --alc-panel: #1F252A; --alc-accent: #5FC2B2; --alc-accent-soft: #1B3632;
+    --alc-on-accent: #0B1A18; --alc-glow: rgba(95, 194, 178, 0.08); --alc-shadow: rgba(0, 0, 0, 0.6);
+    --alc-draft: #E3B25E; --alc-draft-bg: #33280F;
+    --alc-selected: #86A6F5; --alc-selected-bg: #1A2544;
+    --alc-submitted: #6BD097; --alc-submitted-bg: #13301F;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --alc-card: #181D21; --alc-ink: #E9EDF0; --alc-muted: #9CA6B0; --alc-faint: #6E7882;
+  --alc-line: #2A3137; --alc-panel: #1F252A; --alc-accent: #5FC2B2; --alc-accent-soft: #1B3632;
+  --alc-on-accent: #0B1A18; --alc-glow: rgba(95, 194, 178, 0.08); --alc-shadow: rgba(0, 0, 0, 0.6);
+  --alc-draft: #E3B25E; --alc-draft-bg: #33280F;
+  --alc-selected: #86A6F5; --alc-selected-bg: #1A2544;
+  --alc-submitted: #6BD097; --alc-submitted-bg: #13301F;
+}
+
+
+@keyframes alc-ping {
+  0% { transform: scale(0.5); opacity: 0.7; }
+  80%, 100% { transform: scale(1.4); opacity: 0; }
+}
