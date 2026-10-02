@@ -1,0 +1,54 @@
+/* Appointment Pipeline tokens — override these to re-theme the component. */
+:root {
+  --apl-card: #FFFFFF;
+  --apl-well: #F1F4F8;
+  --apl-ink: #0F172A;
+  --apl-muted: #475569;
+  --apl-faint: #5B6A7E;
+  --apl-line: #E2E8F0;
+  --apl-line-strong: #CBD5E1;
+  --apl-coral: #E2553F;
+  --apl-coral-ink: #B83A27;
+  --apl-coral-soft: #FDE8E3;
+  --apl-on-coral: #FFFFFF;
+  --apl-booked: #64748B;      --apl-booked-ink: #475569;
+  --apl-confirmed: #2563EB;   --apl-confirmed-ink: #1D4ED8;
+  --apl-showed: #16A34A;      --apl-showed-ink: #166534;
+  --apl-noshow: #D97706;      --apl-noshow-ink: #92400E;
+  --apl-shadow: rgba(15, 23, 42, 0.18);
+  --apl-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --apl-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --apl-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --apl-card: #151B26; --apl-well: #0F141C; --apl-ink: #E6EBF2; --apl-muted: #A3AEBD; --apl-faint: #8391A3;
+  --apl-line: #263142; --apl-line-strong: #34425A;
+  --apl-coral: #FF8A73; --apl-coral-ink: #FF8A73; --apl-coral-soft: rgba(255, 138, 115, 0.14); --apl-on-coral: #1B0F08;
+  --apl-booked: #94A3B8; --apl-booked-ink: #B6C2D2;
+  --apl-confirmed: #7AA2FF; --apl-confirmed-ink: #9DBBFF;
+  --apl-showed: #4ADE80; --apl-showed-ink: #6EE7A0;
+  --apl-noshow: #FBBF24; --apl-noshow-ink: #FCD34D;
+  --apl-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --apl-card: #151B26; --apl-well: #0F141C; --apl-ink: #E6EBF2; --apl-muted: #A3AEBD; --apl-faint: #8391A3;
+  --apl-line: #263142; --apl-line-strong: #34425A;
+  --apl-coral: #FF8A73; --apl-coral-ink: #FF8A73; --apl-coral-soft: rgba(255, 138, 115, 0.14); --apl-on-coral: #1B0F08;
+  --apl-booked: #94A3B8; --apl-booked-ink: #B6C2D2;
+  --apl-confirmed: #7AA2FF; --apl-confirmed-ink: #9DBBFF;
+  --apl-showed: #4ADE80; --apl-showed-ink: #6EE7A0;
+  --apl-noshow: #FBBF24; --apl-noshow-ink: #FCD34D;
+  --apl-shadow: rgba(0, 0, 0, 0.6);
+}
+@keyframes apl-bump {
+  40% { transform: scale(1.25); }
+}
+@keyframes apl-flash {
+  0% { box-shadow: 0 0 0 3px var(--apl-s), 0 0 0 9px var(--apl-coral-soft); }
+}
+@keyframes apl-in {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: none; }
+}
