@@ -1,0 +1,62 @@
+/* AI Usage Analytics tokens — override these to re-theme the component. */
+:root {
+  --aua-card: #FFFFFF;
+  --aua-ink: #1D1B22;
+  --aua-muted: #57535F;
+  --aua-faint: #6E6977;
+  --aua-line: #E8E5EE;
+  --aua-grid: #EEEBF2;
+  --aua-axis: #CFCAD8;
+  --aua-tint: #F6F3FB;
+  --aua-lilac: #6D4BC3;
+  --aua-lilac-soft: #EEE7FB;
+  --aua-focus: #6D4BC3;
+  /* charcoal side panel */
+  --aua-panel: #25232B;
+  --aua-panel-2: #2E2B35;
+  --aua-panel-ink: #F4F1F8;
+  --aua-panel-muted: #BDB7C8;
+  --aua-panel-line: #3C3844;
+  --aua-ring: #B79CF0;
+  --aua-ring-track: #3A3642;
+  --aua-mint: #5FD3AA;
+  --aua-warn: #F3B36B;
+  /* series: validated all-pairs order (lilac, mint, apricot) for the card surface … */
+  --aua-c1: #8B63D9;
+  --aua-c2: #1A9E74;
+  --aua-c3: #D9822B;
+  /* … and for the charcoal panel */
+  --aua-pc1: #9F7AEA;
+  --aua-pc2: #27A880;
+  --aua-pc3: #D27C49;
+  --aua-tip: #25232B;
+  --aua-tip-ink: #F4F1F8;
+  --aua-shadow: rgba(29, 22, 44, 0.22);
+  --aua-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --aua-display: ui-rounded, "SF Pro Rounded", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --aua-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --aua-card: #1C1B21; --aua-ink: #EEEBF3; --aua-muted: #ADA7B8; --aua-faint: #918B9C;
+    --aua-line: #2E2B35; --aua-grid: #29262F; --aua-axis: #3E3A47; --aua-tint: #24222A;
+    --aua-lilac: #B79CF0; --aua-lilac-soft: rgba(183, 156, 240, 0.14); --aua-focus: #B79CF0;
+    --aua-panel: #131217; --aua-panel-2: #1B1A20; --aua-panel-ink: #EEEBF3; --aua-panel-muted: #ADA7B8;
+    --aua-panel-line: #2C2932; --aua-ring-track: #2C2932;
+    --aua-c1: #9F7AEA; --aua-c2: #27A880; --aua-c3: #D27C49;
+    --aua-tip: #EEEBF3; --aua-tip-ink: #1D1B22; --aua-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --aua-card: #1C1B21; --aua-ink: #EEEBF3; --aua-muted: #ADA7B8; --aua-faint: #918B9C;
+  --aua-line: #2E2B35; --aua-grid: #29262F; --aua-axis: #3E3A47; --aua-tint: #24222A;
+  --aua-lilac: #B79CF0; --aua-lilac-soft: rgba(183, 156, 240, 0.14); --aua-focus: #B79CF0;
+  --aua-panel: #131217; --aua-panel-2: #1B1A20; --aua-panel-ink: #EEEBF3; --aua-panel-muted: #ADA7B8;
+  --aua-panel-line: #2C2932; --aua-ring-track: #2C2932;
+  --aua-c1: #9F7AEA; --aua-c2: #27A880; --aua-c3: #D27C49;
+  --aua-tip: #EEEBF3; --aua-tip-ink: #1D1B22; --aua-shadow: rgba(0, 0, 0, 0.6);
+}
+@keyframes aua-grow {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
