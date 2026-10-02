@@ -1,0 +1,46 @@
+/* Integration Status Grid tokens — override these to re-theme the component. */
+:root {
+  --isg-canvas: #ECEEF1;
+  --isg-tile: #FFFFFF;
+  --isg-ink: #16191D;
+  --isg-muted: #545B65;
+  --isg-faint: #69707A;
+  --isg-line: #DFE2E6;
+  --isg-tint: #F4F5F7;
+  --isg-glyph: #2A2F36;
+  --isg-btn: #1C2026;
+  --isg-btn-ink: #FFFFFF;
+  --isg-ok: #15803D;
+  --isg-ok-soft: #E3F4E8;
+  --isg-warn: #B45309;
+  --isg-warn-soft: #FDF0DD;
+  --isg-bad: #B91C1C;
+  --isg-bad-soft: #FBE6E6;
+  --isg-fix-ink: #FFFFFF;
+  --isg-focus: #2563EB;
+  --isg-scrim: rgba(22, 25, 29, 0.32);
+  --isg-shadow: rgba(18, 22, 28, 0.16);
+  --isg-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --isg-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --isg-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --isg-canvas: #121418; --isg-tile: #1A1D22; --isg-ink: #E8EAED; --isg-muted: #A6ACB5; --isg-faint: #8A919B;
+    --isg-line: #2A2E35; --isg-tint: #20242A; --isg-glyph: #D9DCE1; --isg-btn: #E8EAED; --isg-btn-ink: #121418;
+    --isg-ok: #4ADE80; --isg-ok-soft: rgba(74, 222, 128, 0.13); --isg-warn: #FBBF24; --isg-warn-soft: rgba(251, 191, 36, 0.13);
+    --isg-bad: #F87171; --isg-bad-soft: rgba(248, 113, 113, 0.13); --isg-fix-ink: #2A0B0B; --isg-focus: #93C5FD;
+    --isg-scrim: rgba(0, 0, 0, 0.5); --isg-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --isg-canvas: #121418; --isg-tile: #1A1D22; --isg-ink: #E8EAED; --isg-muted: #A6ACB5; --isg-faint: #8A919B;
+  --isg-line: #2A2E35; --isg-tint: #20242A; --isg-glyph: #D9DCE1; --isg-btn: #E8EAED; --isg-btn-ink: #121418;
+  --isg-ok: #4ADE80; --isg-ok-soft: rgba(74, 222, 128, 0.13); --isg-warn: #FBBF24; --isg-warn-soft: rgba(251, 191, 36, 0.13);
+  --isg-bad: #F87171; --isg-bad-soft: rgba(248, 113, 113, 0.13); --isg-fix-ink: #2A0B0B; --isg-focus: #93C5FD;
+  --isg-scrim: rgba(0, 0, 0, 0.5); --isg-shadow: rgba(0, 0, 0, 0.6);
+}
+@keyframes isg-spin { to { transform: rotate(360deg); } }
+@keyframes isg-in { from { opacity: 0; transform: translateY(6px) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes isg-flash { 0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--isg-ok) 50%, transparent); } 100% { box-shadow: 0 0 0 10px transparent; } }
+@keyframes isg-glow { 50% { box-shadow: 0 0 0 5px color-mix(in oklab, var(--c) 8%, transparent); } }
