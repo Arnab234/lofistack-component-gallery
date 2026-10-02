@@ -1,0 +1,41 @@
+/* Client Health Score tokens — override these to re-theme the component. */
+:root {
+  --chs-card: #FCF9F2;
+  --chs-raise: #FFFEFA;
+  --chs-ink: #241A12;
+  --chs-muted: #5A4E41;
+  --chs-faint: #6B5F52;
+  --chs-line: #E8E0CF;
+  --chs-tint: #F4EEE2;
+  --chs-good: #276B43;   --chs-good-bg: #E3F0E3;
+  --chs-warn: #9A5B07;   --chs-warn-bg: #FBEBCB;
+  --chs-bad: #B4341F;    --chs-bad-bg: #F8E0D8;
+  --chs-good-fill: #3E8E5E; --chs-warn-fill: #D4901F; --chs-bad-fill: #C9492F;
+  --chs-shadow: rgba(60, 40, 15, 0.22);
+  --chs-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --chs-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --chs-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --chs-card: #1B1713; --chs-raise: #231E19; --chs-ink: #F3EBDD; --chs-muted: #C0B3A2; --chs-faint: #A09281;
+    --chs-line: #332B24; --chs-tint: #241F1A;
+    --chs-good: #7AD39D; --chs-good-bg: rgba(122, 211, 157, 0.14);
+    --chs-warn: #F2B653; --chs-warn-bg: rgba(242, 182, 83, 0.14);
+    --chs-bad: #F49A85;  --chs-bad-bg: rgba(244, 154, 133, 0.14);
+    --chs-good-fill: #5DBB83; --chs-warn-fill: #E7A43B; --chs-bad-fill: #E2725A;
+    --chs-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --chs-card: #1B1713; --chs-raise: #231E19; --chs-ink: #F3EBDD; --chs-muted: #C0B3A2; --chs-faint: #A09281;
+  --chs-line: #332B24; --chs-tint: #241F1A;
+  --chs-good: #7AD39D; --chs-good-bg: rgba(122, 211, 157, 0.14);
+  --chs-warn: #F2B653; --chs-warn-bg: rgba(242, 182, 83, 0.14);
+  --chs-bad: #F49A85;  --chs-bad-bg: rgba(244, 154, 133, 0.14);
+  --chs-good-fill: #5DBB83; --chs-warn-fill: #E7A43B; --chs-bad-fill: #E2725A;
+  --chs-shadow: rgba(0, 0, 0, 0.6);
+}
+@keyframes chs-fade {
+  from { opacity: 0.35; transform: translateY(3px); }
+}
