@@ -1,0 +1,45 @@
+/* Ad Creative Performance tokens — override these to re-theme the component. */
+:root {
+  --acp-card: #FFFFFF;
+  --acp-ink: #0B0B0A;
+  --acp-muted: #55554F;
+  --acp-faint: #6E6E68;
+  --acp-line: #E2E2DB;
+  --acp-rule: #0B0B0A;
+  --acp-tint: #F4F4EF;
+  --acp-lime: #A3E635;
+  --acp-lime-ink: #1A2E05;
+  --acp-accent: #4D7C0F;
+  --acp-art-paper: #EFEEE7;
+  --acp-art-ink: #141413;
+  --acp-drawer: #0B0B0A;
+  --acp-drawer-ink: #F4F4F0;
+  --acp-drawer-muted: #A9A9A2;
+  --acp-drawer-line: #2A2A27;
+  --acp-shadow: rgba(10, 10, 9, 0.22);
+  --acp-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --acp-num: "Bahnschrift", "DIN Alternate", "Roboto Condensed", "Arial Narrow", sans-serif;
+  --acp-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --acp-card: #0E0E0D; --acp-ink: #F4F4F0; --acp-muted: #A9A9A2; --acp-faint: #8A8A84;
+    --acp-line: #262624; --acp-rule: #F4F4F0; --acp-tint: #171715;
+    --acp-accent: #A3E635; --acp-art-paper: #1C1C1A; --acp-art-ink: #EDEDE7;
+    --acp-drawer: #171715; --acp-drawer-line: #2E2E2B; --acp-shadow: rgba(0, 0, 0, 0.7);
+  }
+}
+:root[data-theme="dark"] {
+  --acp-card: #0E0E0D; --acp-ink: #F4F4F0; --acp-muted: #A9A9A2; --acp-faint: #8A8A84;
+  --acp-line: #262624; --acp-rule: #F4F4F0; --acp-tint: #171715;
+  --acp-accent: #A3E635; --acp-art-paper: #1C1C1A; --acp-art-ink: #EDEDE7;
+  --acp-drawer: #171715; --acp-drawer-line: #2E2E2B; --acp-shadow: rgba(0, 0, 0, 0.7);
+}
+@keyframes acp-pop {
+  from { opacity: 0; transform: translateY(-4px) scale(0.92); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes acp-swap {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
