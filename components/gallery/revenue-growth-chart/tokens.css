@@ -1,0 +1,46 @@
+/* Revenue Growth tokens — override these to re-theme the component. */
+:root {
+  --rgc-card: #FFFDF6;
+  --rgc-ink: #14231A;
+  --rgc-muted: #4E5B52;
+  --rgc-faint: #66726A;
+  --rgc-line: #E8E4D6;
+  --rgc-grid: #ECE8DA;
+  --rgc-tint: #F4F1E6;
+  --rgc-accent: #166534;
+  --rgc-accent-soft: rgba(22, 101, 52, 0.10);
+  --rgc-area-top: rgba(22, 101, 52, 0.26);
+  --rgc-area-bottom: rgba(22, 101, 52, 0);
+  --rgc-prev: #8C938D;
+  --rgc-good: #166534;
+  --rgc-bad: #B42318;
+  --rgc-tip-bg: #14231A;
+  --rgc-tip-ink: #F4F7F2;
+  --rgc-tip-muted: #B9C6BD;
+  --rgc-tip-good: #86EFAC;
+  --rgc-tip-bad: #FCA5A5;
+  --rgc-shadow: rgba(20, 35, 26, 0.24);
+  --rgc-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --rgc-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --rgc-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --rgc-card: #111A14; --rgc-ink: #E6EFE8; --rgc-muted: #A3B3A8; --rgc-faint: #8A9A90;
+  --rgc-line: #24322A; --rgc-grid: #1D2A22; --rgc-tint: #17221B;
+  --rgc-accent: #4ADE80; --rgc-accent-soft: rgba(74, 222, 128, 0.12);
+  --rgc-area-top: rgba(74, 222, 128, 0.30); --rgc-area-bottom: rgba(74, 222, 128, 0);
+  --rgc-prev: #74837A; --rgc-good: #4ADE80; --rgc-bad: #FF8A7A;
+  --rgc-tip-bg: #E6EFE8; --rgc-tip-ink: #0F1712; --rgc-tip-muted: #43544A; --rgc-tip-good: #166534; --rgc-tip-bad: #B42318;
+  --rgc-shadow: rgba(0, 0, 0, 0.65);
+  }
+}
+:root[data-theme="dark"] {
+  --rgc-card: #111A14; --rgc-ink: #E6EFE8; --rgc-muted: #A3B3A8; --rgc-faint: #8A9A90;
+  --rgc-line: #24322A; --rgc-grid: #1D2A22; --rgc-tint: #17221B;
+  --rgc-accent: #4ADE80; --rgc-accent-soft: rgba(74, 222, 128, 0.12);
+  --rgc-area-top: rgba(74, 222, 128, 0.30); --rgc-area-bottom: rgba(74, 222, 128, 0);
+  --rgc-prev: #74837A; --rgc-good: #4ADE80; --rgc-bad: #FF8A7A;
+  --rgc-tip-bg: #E6EFE8; --rgc-tip-ink: #0F1712; --rgc-tip-muted: #43544A; --rgc-tip-good: #166534; --rgc-tip-bad: #B42318;
+  --rgc-shadow: rgba(0, 0, 0, 0.65);
+}
