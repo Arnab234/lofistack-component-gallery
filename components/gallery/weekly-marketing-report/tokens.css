@@ -1,0 +1,35 @@
+/* Weekly Report tokens — override these to re-theme the component. */
+:root {
+  --wmr-paper: #FAF8F2;
+  --wmr-paper-2: #F3EFE5;
+  --wmr-ink: #141210;
+  --wmr-muted: #4F4A43;
+  --wmr-faint: #6C665D;
+  --wmr-rule: #1A1714;
+  --wmr-hair: #D9D3C6;
+  --wmr-red: #B91C1C;
+  --wmr-red-soft: rgba(185, 28, 28, 0.08);
+  --wmr-grain: rgba(60, 45, 20, 0.035);
+  --wmr-shadow: rgba(40, 30, 15, 0.22);
+  --wmr-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --wmr-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --wmr-sans: "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --wmr-mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --wmr-paper: #1A1816; --wmr-paper-2: #211E1B; --wmr-ink: #EEE8DC; --wmr-muted: #BDB4A4; --wmr-faint: #958C7E;
+    --wmr-rule: #D9D1C2; --wmr-hair: #36322C; --wmr-red: #F87171; --wmr-red-soft: rgba(248, 113, 113, 0.10);
+    --wmr-grain: rgba(255, 245, 225, 0.025); --wmr-shadow: rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"] {
+  --wmr-paper: #1A1816; --wmr-paper-2: #211E1B; --wmr-ink: #EEE8DC; --wmr-muted: #BDB4A4; --wmr-faint: #958C7E;
+  --wmr-rule: #D9D1C2; --wmr-hair: #36322C; --wmr-red: #F87171; --wmr-red-soft: rgba(248, 113, 113, 0.10);
+  --wmr-grain: rgba(255, 245, 225, 0.025); --wmr-shadow: rgba(0, 0, 0, 0.6);
+}
+/* week change: the report body rises in */
+@keyframes wmr-rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
